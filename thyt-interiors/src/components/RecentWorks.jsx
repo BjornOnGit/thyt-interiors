@@ -1,27 +1,9 @@
 import React from "react";
-
+import { works } from "../content/constants";
+import workImage1 from "../assets/recent-work-image-1.png"
+import workImage2 from "../assets/recent-work-image-2.png"
 const RecentWorks = () => {
-  const works = [
-    {
-      title: "Villa Furnishing & Interior",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.",
-      image: "https://via.placeholder.com/500x300", // Replace with your actual image URL
-    },
-    {
-      title: "Luxury Hotel Renovation",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.",
-      image: "https://via.placeholder.com/200x200", // Replace with your actual image URL
-    },
-    {
-      title: "Residence Swimming Pool",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam.",
-      image: "https://via.placeholder.com/200x200", // Replace with your actual image URL
-    },
-  ];
-
+  
   return (
     <section className="py-16 bg-white font-playfairdisplay">
       <div className="container mx-auto px-6">
@@ -41,7 +23,7 @@ const RecentWorks = () => {
           {/* First Item */}
           <div className="lg:col-span-2 flex flex-col md:flex-row items-center gap-6">
             <img
-              src={works[0].image}
+              src={workImage1}
               alt={works[0].title}
               className="w-full md:w-1/2 rounded-lg shadow-md"
             />
@@ -61,7 +43,7 @@ const RecentWorks = () => {
             {works.slice(1).map((work, index) => (
               <div key={index} className="flex items-center gap-6">
                 <img
-                  src={work.image}
+                  src={workImage2}
                   alt={work.title}
                   className="w-32 h-32 md:w-48 md:h-48 rounded-lg shadow-md"
                 />
